@@ -1,5 +1,5 @@
 # Projeto-04
-Projeto de um site para dentista
+Projeto de estudo de um site para dentista.
 
 
 
