@@ -30,6 +30,12 @@ html, body{
 
 header{
     padding: 20px 2%;
+    background-color:white;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
 }
 header .logo img{
     float: left;
