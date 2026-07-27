@@ -71,7 +71,7 @@ nav.menu-mobile ul li{
 nav.menu-mobile ul a{
     text-decoration: none;
     color: black;
-    padding: 1% 35%;
+    padding: 1% 30%;
 }
 nav.menu-mobile ul li:hover{
     background-color:#98a5ae;
