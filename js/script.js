@@ -1,10 +1,25 @@
 const mbMenu = document.getElementById('mbMenu');
 const mbMenuUl = document.getElementById('mbMenuUl');
 
-mbMenu.addEventListener( 'click', function() {
+mbMenu.addEventListener( 'click', function(e) {
+
+    e.stopPropagation();
+
     mbMenu.classList.toggle('active');
     mbMenuUl.classList.toggle('active'); 
 })
+
+document.addEventListener('click', function(e){
+
+    if(
+        !mbMenu.contains(e.target) &&
+        !mbMenuUl.contains(e.target)
+    ){
+        mbMenu.classList.remove('active');
+        mbMenuUl.classList.remove('active');
+    }
+
+});
 
 
 const bullets = document.querySelectorAll(".bullet");
