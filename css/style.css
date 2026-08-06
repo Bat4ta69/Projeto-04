@@ -31,11 +31,6 @@ html, body{
 header{
     padding: 20px 2%;
     background-color:white;
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 998;
 }
 header .logo img{
     float: left;
@@ -61,10 +56,13 @@ nav.menu-mobile ul{
     width: 100%;
     z-index: 999;
     opacity: 0;
+    max-height: 0;
+    overflow: hidden;
     transform: translateY(-15px);
     transition: all 0.4s ease;
 }
 nav.menu-mobile ul.active{
+    max-height: 300px;
     opacity: 1;
     transform: translateY(0);
 }
@@ -72,12 +70,12 @@ nav.menu-mobile ul li{
     font-size: 13px;
     padding: 10px 0;
     text-transform: uppercase;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
 }
 nav.menu-mobile ul a{
     text-decoration: none;
     color: black;
-    padding: 1% 30%;
+    padding: 1% 35%;
 }
 nav.menu-mobile ul li:hover{
     background-color:#98a5ae;
@@ -473,6 +471,16 @@ footer p{
 }
     @media screen and (max-width: 768px){
     
+    header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+}
+.mosaico{
+    padding-top: 70px;
+}
     nav.menu-desktop{
         display: none;
     }
